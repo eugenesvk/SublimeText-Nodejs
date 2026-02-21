@@ -3,7 +3,7 @@
 "cmd"       	: ["node.exe", "$file"],
 "shell"     	: true,
 "encoding"  	: "cp1252",
-"windows"   	:{"shell_cmd":"taskkill /F /IM node.exe & node $file"},
+"windows"   	:{"shell_cmd":"taskkill /F /IM node.exe 2>NULL & node $file"},
 "linux"     	:{"shell_cmd":"killall node; /usr/bin/env node $file"},
 "osx"       	:{"shell_cmd":"killall node; /usr/bin/env node $file"},
 }
