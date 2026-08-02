@@ -82,7 +82,7 @@ class NodeCommand(sublime_plugin.TextCommand):
 
         debug('node_version: raw', version)
 
-        version = int(re.findall('v(\d+)', version)[0])
+        version = int(re.findall(R'v(\d+)', version)[0])
         debug('node_version: int', version)
 
         return version
